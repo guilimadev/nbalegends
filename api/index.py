@@ -1,8 +1,11 @@
-from vercel_python.server import VercelServer
-from django.core.asgi import get_asgi_application
+# api/index.py
 import os
+import sys
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "manager.settings")
+from django.core.asgi import get_asgi_application
 
-application = get_asgi_application()
-handler = VercelServer(application)
+# Set up Django project path and settings
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'manager.settings')  # Change if needed
+
+app = get_asgi_application()
