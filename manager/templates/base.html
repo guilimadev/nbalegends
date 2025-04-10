@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="{% static 'assets/img/favicon.png' %}">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Jarrett Culver Fantasy League
+    NBA Legends
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -34,15 +34,21 @@
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
+          <li class="{% if 'Headlines.html' in request.path %}active{% endif %}">
+            <a target="_self" href="/html-preview/Headlines.html">
+              <i class="now-ui-icons education_paper"></i>
+              <p>Headlines</p>
+            </a>
+          </li>
           <li class="{% if 'NBAStandings.html' in request.path %}active{% endif %}">
             <a target="_self" href="/html-preview/NBAStandings.html">
-              <i class="now-ui-icons design_app"></i>
+              <i class="now-ui-icons design_bullet-list-67"></i>
               <p>Standings</p>
             </a>
           </li>
           <li class="{% if 'NBALeagueLeaders.html' in request.path %}active{% endif %}">
             <a href="/html-preview/NBALeagueLeaders.html">
-              <i class="now-ui-icons education_atom"></i>
+              <i class="now-ui-icons sport_trophy"></i>
               <p>Leaders</p>
             </a>
           </li>
@@ -52,6 +58,37 @@
               <p>Draft Total</p>
             </a>
           </li>
+          <li class="{% if 'Schedule.html' in request.path %}active{% endif %}">
+            <a href="/html-preview/Schedule.html">
+              <i class="now-ui-icons ui-1_calendar-60"></i>
+              <p>Schedule</p>
+            </a>
+          </li>
+          <li class="{% if 'Transactions.html' in request.path %}active{% endif %}">
+            <a href="/html-preview/Transactions.html">
+              <i class="now-ui-icons loader_refresh"></i>
+              <p>Transactions</p>
+            </a>
+          </li>
+          <li class="{% if 'DBLStandings.html' in request.path %}active{% endif %}">
+            <a href="/html-preview/DBLStandings.html">
+              <i class="now-ui-icons design_bullet-list-67"></i>
+              <p>D-League Standings</p>
+            </a>
+          </li>
+          <li class="{% if 'DBLLeagueLeaders.html' in request.path %}active{% endif %}">
+            <a href="/html-preview/DBLLeagueLeaders.html">
+              <i class="now-ui-icons objects_diamond"></i>
+              <p>D-League Leaders</p>
+            </a>
+          </li>
+          <li class="{% if 'FACoach.html' in request.path %}active{% endif %}">
+            <a href="/html-preview/FACoach.html">
+              <i class="now-ui-icons users_single-02"></i>
+              <p>Available Coaches</p>
+            </a>
+          </li>
+          
         </ul>
       </div>
     </div>
@@ -123,34 +160,6 @@
         <!-- Content will go here -->
         {% endblock %}
       </div>
-      <footer class="footer">
-        <div class=" container-fluid ">
-          <nav>
-            <ul>
-              <li>
-                <a href="https://www.creative-tim.com">
-                  Jarrett Culver Fantasy League
-                </a>
-              </li>
-              <li>
-                <a href="http://presentation.creative-tim.com">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="copyright" id="copyright">
-            &copy; <script>
-              document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-            </script>, Designed by <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
-          </div>
-        </div>
-      </footer>
     </div>
     
   </div>

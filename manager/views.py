@@ -3,9 +3,11 @@ from django.conf import settings
 from django.http import HttpResponseNotFound
 from django.shortcuts import render
 from urllib.parse import unquote
+from django.shortcuts import redirect
 import re
 
-
+def redirect_to_default_html(request):
+    return redirect('/html-preview/Headlines.html/')
 
 def show_html(request, filename):
     filename = unquote(filename)
