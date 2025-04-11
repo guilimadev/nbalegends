@@ -10,7 +10,7 @@ def redirect_to_default_html(request):
     return redirect('/html-preview/Headlines.html/')
 
 def show_html(request, filename):
-    filename = unquote(filename)
+    filename = unquote(unquote(filename))
     file_path = os.path.join(settings.MEDIA_ROOT, 'htmls', filename)
 
     if not os.path.exists(file_path):
