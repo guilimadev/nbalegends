@@ -16,21 +16,27 @@ def show_html(request, filename):
     if not os.path.exists(file_path):
         return HttpResponseNotFound("File not found")
 
-    with open(file_path, encoding='utf-8') as f:
+    with open(file_path, encoding='utf-8', errors='replace') as f:
         content = f.read()
 
-    # Rewrite relative links to point to the /html-preview/ route
-    def rewrite_link(match):
+    def rewrite_href(match):
         href_value = match.group(2)
         if href_value.endswith('.html') and not href_value.startswith(('http', '/', '#')):
             return f'{match.group(1)}/html-preview/{href_value}{match.group(3)}'
         return match.group(0)
 
-    # Regex breakdown:
-    # 1. Group 1: href= (with optional spacing and opening quote)
-    # 2. Group 2: actual filename
-    # 3. Group 3: closing quote (optional)
-    pattern = r'(href\s*=\s*[\'"]?)([^\'"\s>]+)([\'"]?)'
-    content = re.sub(pattern, rewrite_link, content, flags=re.IGNORECASE)
+    # Rewrite relative links to point to the /html-preview/ route
+    def rewrite_src(match):
+        src_value = match.group(2)
+        if not src_value.startswith(('http', '/', 'data:', '#')):
+            return f'{match.group(1)}/static/{src_value}{match.group(3)}'
+        return match.group(0)
+
+    # Apply both rewrites
+    href_pattern = r'(href\s*=\s*[\'"]?)([^\'"\s>]+)([\'"]?)'
+    src_pattern = r'(src\s*=\s*[\'"]?)([^\'"\s>]+)([\'"]?)'
+
+    content = re.sub(href_pattern, rewrite_href, content, flags=re.IGNORECASE)
+    content = re.sub(src_pattern, rewrite_src, content, flags=re.IGNORECASE)
 
     return render(request, 'main.html', {'html_content': content})
