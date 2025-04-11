@@ -21,10 +21,8 @@ def show_html(request, filename):
 
     def rewrite_href(match):
         href_value = match.group(2)
-        print(href_value)
         if href_value.endswith('.html') and not href_value.startswith(('http', '/', '#')):
-            encoded_href = quote(href_value)
-            return f'{match.group(1)}/html-preview/{encoded_href}{match.group(3)}'
+            return f'{match.group(1)}/html-preview/{href_value}{match.group(3)}'
         return match.group(0)
 
     def rewrite_src(match):
