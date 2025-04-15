@@ -24,6 +24,7 @@ urlpatterns = [
     path('', views.redirect_to_default_html, name='home'),
     path('admin/', admin.site.urls),    
     path('html-preview/<str:filename>/', views.show_html, name='show-html'),
+    path('coluna', views.capivara_view, name='coluna')
 ]
 
 

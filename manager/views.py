@@ -47,3 +47,7 @@ def show_html(request, filename):
     content = re.sub(src_pattern, rewrite_src, content, flags=re.IGNORECASE)
 
     return render(request, 'main.html', {'html_content': content})
+
+
+def capivara_view(request):
+    return render(request, 'capiporter.html', {'message': 'Welcome to my site!'})
