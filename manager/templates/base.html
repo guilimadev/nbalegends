@@ -100,6 +100,20 @@
               <p>Free Agents</p>
             </a>
           </li>
+
+          <li class="{% if '/pre-preview/NBAStandings.html' in request.path %}active{% endif %}">
+            <a href="/pre-preview/NBAStandings.html">
+              <i class="now-ui-icons users_single-02"></i>
+              <p>Pré Standings</p>
+            </a>
+          </li>
+
+          <li class="{% if '/pre-preview/NBALeagueLeaders.html' in request.path %}active{% endif %}">
+            <a href="/pre-preview/NBALeagueLeaders.html">
+              <i class="now-ui-icons users_single-02"></i>
+              <p>Pré Leaders</p>
+            </a>
+          </li>
           
         </ul>
       </div>
