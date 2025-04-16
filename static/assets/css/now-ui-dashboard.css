@@ -4982,7 +4982,7 @@ Created using IcoMoon - icomoon.io
   .bar1,
   .bar2,
   .bar3 {
-    outline: 1px solid transparent;
+    outline: 1px solid black;
   }
 
   .bar1 {
