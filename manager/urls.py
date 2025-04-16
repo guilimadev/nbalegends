@@ -25,6 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),    
     path('html-preview/<str:filename>/', views.show_html, name='show-html'),
     path('pre-preview/<str:filename>/', views.show_pre, name='show-pre'),
+    path('pre2-preview/<str:filename>/', views.show_pre2, name='show-pre2'),
     path('coluna', views.capivara_view, name='coluna')
 ]
 
