@@ -7,12 +7,7 @@
       "use": "@vercel/python"
     }
   ],
-  "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "/staticfiles/$1",
-      "continue": true
-    },
+  "routes": [    
     {
       "src": "/(.*)",
       "dest": "manager/wsgi.py"
