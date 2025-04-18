@@ -19,27 +19,35 @@ def show_html(request, filename):
     with open(file_path, encoding='utf-8', errors='replace') as f:
         content = f.read()
 
+    # Step 1: Fix malformed anchor tags like:
+    # <a href="PORTrail" blazers_depth.html="">
+    malformed_a_pattern = r'<a\s+href="([^"]+)"\s+([a-zA-Z0-9_]+\.html)=""'
+    content = re.sub(
+        malformed_a_pattern,
+        lambda m: f'<a href="{m.group(1)} {m.group(2)}"',
+        content,
+        flags=re.IGNORECASE
+    )
+
+    # Step 2: Rewrite href links
     def rewrite_href(match):
         if len(match.groups()) == 3:
             prefix, href_value, suffix = match.group(1), match.group(2), match.group(3)
         else:
             prefix, href_value, suffix = match.group(1), match.group(2), ''
-
         if href_value.endswith('.html') and not href_value.startswith(('http', '/', '#')):
             return f'{prefix}/html-preview/{href_value}/{suffix}'
         return match.group(0)
 
+    # Step 3: Rewrite src links (e.g. <img src="...">)
     def rewrite_src(match):
         src_value = match.group(2)
         if not src_value.startswith(('http', '/', 'data:', '#')):
             return f'{match.group(1)}/static/{src_value}{match.group(3)}'
         return match.group(0)
-    
-    quoted_href_pattern = r'(href\s*=\s*["\'])([^"\']+)(["\'])'
 
-    # Pattern for unquoted hrefs
+    quoted_href_pattern = r'(href\s*=\s*["\'])([^"\']+)(["\'])'
     unquoted_href_pattern = r'(href\s*=\s*)([^\s>]+)'
-    
     src_pattern = r'(src\s*=\s*[\'"]?)([^\'"\s>]+)([\'"]?)'
 
     content = re.sub(quoted_href_pattern, rewrite_href, content, flags=re.IGNORECASE)
@@ -47,6 +55,8 @@ def show_html(request, filename):
     content = re.sub(src_pattern, rewrite_src, content, flags=re.IGNORECASE)
 
     return render(request, 'main.html', {'html_content': content})
+
+
 
 
 def show_pre(request, filename):
