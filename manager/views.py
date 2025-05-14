@@ -7,7 +7,7 @@ from django.shortcuts import redirect
 import re
 
 def redirect_to_default_html(request):
-    return redirect('/html-preview/Headlines.html/')
+    return redirect('/html-preview/NBAStandings.html/')
 
 def show_html(request, filename):
     filename = unquote(filename)
