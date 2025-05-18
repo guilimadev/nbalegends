@@ -1,336 +1,40 @@
 <html>
-
 <head>
+<script type = 'text/javascript' src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+<link rel ='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.7/semantic.min.css'>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.7/semantic.min.js'></script>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<link rel ='stylesheet' href='/styles/custom.css'>
 <title>1981 Boston Depth Chart</title>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style>
+a:link, a:visited {color:#333333; !important;}
+a:hover {color:#999999; !important;}
+</style>
 </head>
-
-<body>
-
-<table width="795" border="0">
- <tr>
-    <td height="89" width="125">
-    </td>
-    <td height="89" width="670">
-      <div align="center"><img src="images/htmlbanner.jpg" width="670" height="89"></div>
-    </td>
-  </tr>
-  <tr>
-    <td height="63" width="125">
-      <div align="center"><img src="images/RW_NBA_Boston_Celtics.png" width="125" height="125"></div>
-    </td>
-    <td height="63" width="670">
-      <table width="100%" border="0">
-        <tr>
-          <td height="35"><font size="5"><b><font face="Verdana" color="#000000">Boston Celtics (9-2)</font></b></td>
-        </tr>
-        <tr bgcolor=#007A30>
-          <td height="15">&nbsp;</td>
-        </tr>
-        <tr>
-          <td height="2">
-            <table width="100%" border="0">
-              <tr>
-                <td height="10" width="19%">
-                  <div align="center"><a style="text-decoration: none" href=BOSCeltics_Info.html><font face="Verdana" size="1" color="#808080">Team Information </font></a></div>
-                </td>
-                <td height="10" width="13%">
-                  <div align="center"><a style="text-decoration: none" href=BOSCeltics_Roster.html><font face="Verdana" size="1" color="#808080">Team Roster </font></a></div>
-                </td>
-                <td height="10" width="14%">
-                  <div align="center"><a style="text-decoration: none" href=BOSCeltics_Ratings.html><font face="Verdana" size="1" color="#808080">Player Ratings </font></a></div>
-                </td>
-                <td height="10" width="12%">
-                  <div align="center"><a style="text-decoration: none" href=BOSCeltics_Depth.html><font face="Verdana" size="1" color="#808080">Depth Chart </font></a></div>
-                </td>
-                <td height="10" width="12%">
-                  <div align="center"><a style="text-decoration: none" href=BOSCeltics_Stats.html><font face="Verdana" size="1" color="#808080">Player Stats </font></a></div>
-                </td>
-                <td height="10" width="14%">
-                  <div align="center"><a style="text-decoration: none" href=BOSCeltics_Schedule.html><font face="Verdana" size="1" color="#808080">Team Schedule </font></a></div>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td height="35">&nbsp;</td>
-        </tr>
-      </table>
-    </td>
-  </tr>
+<body style='background-color:white'>
+<font face='Roboto'>
+<div class='ui one column grid'>
+<div class='column' style='width:100%;'>
+<div class='column' style='padding:0px !important; height:100%: width:100%; background-color:#007A30; background-image: linear-gradient(to right, #007A30 , rgba(0,0,0,0.5));'><div class='ui two column grid'><div class='column' style='width:6%'><img class='ui image' src='images/RW_NBA_Boston_Celtics.png' style='height:auto; width:100%; max-width:90px'></div><div class='column' style='width:94%; margin-top:15px'><font color='white' size='36pt'><b>BOSTON</b> CELTICS</font><div class='ui divider'></div><div class='ui eight column grid'><div class='column' style='width:12%'><div class='ui mini horizontal statistic'><div class='value' style='color:white'>18-6</div><div class='label' style='color:white'>Record</div></div></div><div class='column' style='width:12%'><div class='ui mini horizontal statistic'><div class='value' style='color:white'>L1</div><div class='label' style='color:white'>Streak</div></div></div><div class='column' style='width:9%'><div class='ui mini horizontal statistic'><div class='value' style='color:white'>114,8</div><div class='label' style='color:white'>PPG</div></div></div><div class='column' style='width:9%'><div class='ui mini horizontal statistic'><div class='value' style='color:white'>107,3</div><div class='label' style='color:white'>OPPG</div></div></div><div class='column' style='width:9%'><div class='ui mini horizontal statistic'><div class='value' style='color:white'>27,8</div><div class='label' style='color:white'>APG</div></div></div><div class='column' style='width:9%'><div class='ui mini horizontal statistic'><div class='value' style='color:white'>40,0</div><div class='label' style='color:white'>RPG</div></div></div><div class='column' style='width:20%'><div class='ui mini horizontal statistic'><div class='value' style='color:white'>$4.361.427</div><div class='label' style='color:white'>Team Salary</div></div></div><div class='column' style='width:20%'><div class='ui mini horizontal statistic'><div class='value' style='color:white'>$-128.427</div><div class='label' style='color:white'>Cap Status</div></div></div></div></div></div></div>
+</div>
+</div>
+<br><div class='ui seven column grid' style='margin-top:1px'><div class='ui column'><h4 class='ui header'><i class='compass icon'></i><div class='content'>Team Navigation</div></h4></div><div class='ui column'><h4 class='ui header'><i class='info circle icon'></i><div class='content'><a style='color:#007A30'; href=BOSCeltics_Info.html>Team Information</a></div></h4></div><div class='ui column'><h4 class='ui header'><i class='users icon'></i><div class='content'><a style='color:#007A30'; href=BOSCeltics_Roster.html>Team Roster</a></div></h4></div><div class='ui column'><h4 class='ui header'><i class='id badge icon'></i><div class='content'><a style='color:#007A30'; href=BOSCeltics_Ratings.html>Player Ratings/Contracts</a></div></h4></div><div class='ui column'><h4 class='ui header'><i class='sitemap icon'></i><div class='content'><a style='color:#007A30'; href=BOSCeltics_Depth.html>Depth Chart</a></div></h4></div><div class='ui column'><h4 class='ui header'><i class='chart bar icon'></i><div class='content'><a style='color:#007A30'; href=BOSCeltics_Stats.html>Player Stats</a></div></h4></div><div class='ui column'><h4 class='ui header'><i class='calendar icon'></i><div class='content'><a style='color:#007A30'; href=BOSCeltics_Schedule.html>Team Schedule</a></div></h4></div></div>
+<h5 class='ui header'><i class='basketball ball icon'></i><div class='content'>Starting Lineup</div></h5>
+<table class='ui selectable basic table' style='width:100%;'>
+<thead><tr><th>POS</th><th>PLAYER</th><th>PPG</th><th>APG</th><th>RPG</th><th>BPG</th><th>SPG</th></tr></thead><tbody><tr><td>SG</td><td><a href=johned01.html>Eddie Johnson</a></td><td>11,4</td><td>6,5</td><td>3,0</td><td>0,3</td><td>1,1</td></tr><tr><td>SG</td><td><a href=grifda01.html>Darrell Griffith</a></td><td>13,4</td><td>3,0</td><td>3,8</td><td>0,6</td><td>1,0</td></tr><tr><td>SF</td><td><a href=erviju01.html>Julius Erving</a></td><td>22,5</td><td>4,0</td><td>5,6</td><td>1,3</td><td>2,0</td></tr><tr><td>PF</td><td><a href=johnge03.html>George Johnson</a></td><td>15,6</td><td>1,3</td><td>5,8</td><td>0,6</td><td>1,2</td></tr><tr><td>PF</td><td><a href=willbu02.html>Buck Williams</a></td><td>10,8</td><td>2,7</td><td>7,2</td><td>1,0</td><td>0,8</td></tr></tbody>
 </table>
-<p><font face="Verdana" size="2"><b>Depth Chart</b></font><br>
-</p>
-<table width=545 border=0 style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" cellspacing="0" height="68">
-  <tr>
-    <td align=center height="20" bgcolor=#007A30 colspan="7">
-      <div align="left"><font size="2"><b> <font face="Verdana" color="#FFFFFF">Starting Lineup</font></b></font></div>
-    </td>
-  </tr>
-  <tr>
-    <td align="left" height="12"> <font size="1"><b><font face="Verdana">Player</font></b></font></td>
-    <td align=center height="12"><font size="1"><b><font face="Verdana">Pos</font></b></font></td>
-    <td align=center height="12"><font size="1"><b><font face="Verdana">PPG</font></b></font></td>
-    <td align=center height="12"><font size="1"><b><font face="Verdana">APG</font></b></font></td>
-    <td align=center height="12"><font size="1"><b><font face="Verdana">RPG</font></b></font></td>
-    <td align=center height="12"><font size="1"><b><font face="Verdana">SPG</font></b></font></td>
-    <td align=center height="12"><font size="1"><b><font face="Verdana">BPG</font></b></font></td>
-  </tr>
-        <TR bgColor=#808080>
-          <TD width=150 bgcolor="#C0C0C0">
-          <FONT face="Verdana" style="font-size: 7pt">Eddie Johnson</FONT></TD>
-          <TD align=middle width=45 bgcolor="#C0C0C0">
-          <FONT face="Verdana" style="font-size: 7pt">PG</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">9.1</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">4.9</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">2.9</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">0.9</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">0.5</font></TD>
-        </TR>
-        <TR>
-          <TD width=150 valign="middle">
-          <FONT face="Verdana" style="font-size: 7pt">Darrell Griffith</FONT></TD>
-          <TD align=middle width=45 valign="middle">
-          <FONT face="Verdana" style="font-size: 7pt">SG</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">15.1</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">3.1</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">3.4</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">1.2</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">0.8</font></TD>
-        </TR>
-        <TR bgColor=#808080>
-          <TD width=150 bgcolor="#C0C0C0">
-          <FONT face="Verdana" style="font-size: 7pt">Julius Erving</FONT></TD>
-          <TD align=middle width=45 bgcolor="#C0C0C0">
-          <FONT face="Verdana" style="font-size: 7pt">SF</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">27.4</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">3.8</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">6.4</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">2.5</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">1.1</font></TD>
-        </TR>
-        <TR>
-          <TD width=150 valign="middle">
-          <FONT face="Verdana" style="font-size: 7pt">George Johnson</FONT></TD>
-          <TD align=middle width=45 valign="middle">
-          <FONT face="Verdana" style="font-size: 7pt">PF</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">16.6</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">1.5</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">6.0</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">1.0</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">0.6</font></TD>
-        </TR>
-        <TR bgColor=#808080>
-          <TD width=150 bgcolor="#C0C0C0">
-          <FONT face="Verdana" style="font-size: 7pt">Ben Poquette</FONT></TD>
-          <TD align=middle width=45 bgcolor="#C0C0C0">
-          <FONT face="Verdana" style="font-size: 7pt">C</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">11.0</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">0.9</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">3.9</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">0.4</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">1.7</font></TD>
-        </TR>
-  <tr>
-    <td align="left" width="150" height="25">&nbsp; </td>
-    <td align=center width=45 height="25">&nbsp;</td>
-    <td align=center width=70 height="25">&nbsp;</td>
-    <td align=center width=70 height="25">&nbsp;</td>
-    <td align=center width=70 height="25">&nbsp;</td>
-    <td align=center width=70 height="25">&nbsp;</td>
-    <td align=center width=70 height="25">&nbsp;</td>
-  </tr>
-  <tr bgcolor=#007A30 >
-    <td align="left" width="545" height="20" colspan="7"> <font size="2"><b><font face="Verdana" color="#FFFFFF">Bench Depth Chart</font></b></font></td>
-  </tr>
-  <tr>
-    <td align="left" height="12"> <font size="1"><b><font face="Verdana">Player</font></b></font></td>
-    <td align=center height="12"><font size="1"><b><font face="Verdana">Pos</font></b></font></td>
-    <td align=center height="12"><font size="1"><b><font face="Verdana">PPG</font></b></font></td>
-    <td align=center height="12"><font size="1"><b><font face="Verdana">APG</font></b></font></td>
-    <td align=center height="12"><font size="1"><b><font face="Verdana">RPG</font></b></font></td>
-    <td align=center height="12"><font size="1"><b><font face="Verdana">SPG</font></b></font></td>
-    <td align=center height="12"><font size="1"><b><font face="Verdana">BPG</font></b></font></td>
-  </tr>
-        <TR bgColor=#808080>
-          <TD width=150 bgcolor="#C0C0C0">
-          <FONT face="Verdana" style="font-size: 7pt">Buck Williams</FONT></TD>
-          <TD align=middle width=40 bgcolor="#C0C0C0">
-          <FONT face="Verdana" style="font-size: 7pt">PF</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">7.2</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">4.1</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">8.0</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">0.5</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">1.4</font></TD>
-        </TR>
-        <TR>
-          <TD width=150 valign="middle">
-          <FONT face="Verdana" style="font-size: 7pt">Calvin Natt</FONT></TD>
-          <TD align=middle width=40 valign="middle">
-          <FONT face="Verdana" style="font-size: 7pt">SF</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">4.8</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">1.2</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">1.6</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">0.6</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">0.2</font></TD>
-        </TR>
-        <TR bgColor=#808080>
-          <TD width=150 bgcolor="#C0C0C0">
-          <FONT face="Verdana" style="font-size: 7pt">Calvin Murphy</FONT></TD>
-          <TD align=middle width=40 bgcolor="#C0C0C0">
-          <FONT face="Verdana" style="font-size: 7pt">PG</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">3.8</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">1.9</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">1.3</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">0.3</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">0.3</font></TD>
-        </TR>
-        <TR>
-          <TD width=150 valign="middle">
-          <FONT face="Verdana" style="font-size: 7pt">Samuel Williams</FONT></TD>
-          <TD align=middle width=40 valign="middle">
-          <FONT face="Verdana" style="font-size: 7pt">PF</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">5.8</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">0.6</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">2.6</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">0.8</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">0.5</font></TD>
-        </TR>
-        <TR bgColor=#808080>
-          <TD width=150 bgcolor="#C0C0C0">
-          <FONT face="Verdana" style="font-size: 7pt">Rory Sparrow</FONT></TD>
-          <TD align=middle width=40 bgcolor="#C0C0C0">
-          <FONT face="Verdana" style="font-size: 7pt">PG</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">4.4</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">2.0</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">0.5</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">0.3</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">0.1</font></TD>
-        </TR>
-        <TR>
-          <TD width=150 valign="middle">
-          <FONT face="Verdana" style="font-size: 7pt">Bootsy Bibby</FONT></TD>
-          <TD align=middle width=40 valign="middle">
-          <FONT face="Verdana" style="font-size: 7pt">C</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">7.1</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">2.1</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">3.0</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">0.3</font></TD>
-          <TD align=center width=70 bgcolor="#FFFFFF">
-          <font face="Verdana" style="font-size: 7pt">1.4</font></TD>
-        </TR>
-        <TR bgColor=#808080>
-          <TD width=150 bgcolor="#C0C0C0">
-          <FONT face="Verdana" style="font-size: 7pt">Tom Henderson</FONT></TD>
-          <TD align=middle width=40 bgcolor="#C0C0C0">
-          <FONT face="Verdana" style="font-size: 7pt">PG</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">0.3</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">0.7</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">0.0</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">0.0</font></TD>
-          <TD align=center width=70 bgcolor="#C0C0C0">
-          <font face="Verdana" style="font-size: 7pt">0.0</font></TD>
-        </TR>
-  </TABLE>
-<p><font face="Verdana" size="2"><b>Injuries</b></font></p>
-<table width=545 border=0 style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" cellspacing="0" height="68">
-  <tr>
-    <td align=center bgcolor=#007A30 width="200" height="12">
-      <div align="left"><font size="1"><b> <font face="Verdana" color="#FFFFFF">Name</font></b></font></div>
-    </td>
-    <td align=center height="2" bgcolor=#007A30 width="185">
-      <div align="left"><font size="1"><b><font face="Verdana" color="#FFFFFF">Injury</font></b></font></div>
-    </td>
-    <td align=center height="2" bgcolor=#007A30 width="60">
-      <div align="left"><font size="1"><b><font face="Verdana" color="#FFFFFF">Duration</font></b></font></div>
-    </td>
-  </tr>
-<tr>
-  <td align="left" width="200"> <font face="Verdana" size="1">SF Julius Erving</font></td>
-  <td align=center width=185 height="12">
-    <div align="left"><font face="Verdana" size="1">a sore hip</font></div>
-  </td>
-  <td align=center width=60 height="12">
-    <div align="left"><font face="Verdana" size="1">3 days</font></div>
-  </td>
-</tr>
-<tr>
-  <td align="left" width="200"> <font face="Verdana" size="1">SG Johnny Davis</font></td>
-  <td align=center width=185 height="12">
-    <div align="left"><font face="Verdana" size="1">a sprained finger</font></div>
-  </td>
-  <td align=center width=60 height="12">
-    <div align="left"><font face="Verdana" size="1">2 days</font></div>
-  </td>
-</tr>
-<tr>
-  <td align="left" width="200"> <font face="Verdana" size="1">PG Tom Henderson</font></td>
-  <td align=center width=185 height="12">
-    <div align="left"><font face="Verdana" size="1">a mild concussion</font></div>
-  </td>
-  <td align=center width=60 height="12">
-    <div align="left"><font face="Verdana" size="1">1 days</font></div>
-  </td>
-</tr>
-</TABLE>
+<h5 class='ui header'><i class='basketball ball icon'></i><div class='content'>Bench Depth</div></h5>
+<table class='ui selectable basic table' style='width:100%;'>
+<thead><tr><th>POS</th><th>PLAYER</th><th>PPG</th><th>APG</th><th>RPG</th><th>BPG</th><th>SPG</th></tr></thead><tbody><tr><td>PF</td><td><a href=poqube01.html>Ben Poquette</a></td><td>13,1</td><td>1,3</td><td>5,2</td><td>2,3</td><td>0,6</td></tr><tr><td>SF</td><td><a href=nattca01.html>Calvin Natt</a></td><td>9,5</td><td>1,4</td><td>3,1</td><td>0,4</td><td>0,9</td></tr><tr><td>SG</td><td><a href=davijo01.html>Johnny Davis</a></td><td>10,1</td><td>4,4</td><td>2,4</td><td>0,1</td><td>0,6</td></tr><tr><td>PF</td><td><a href=willsa03.html>Samuel Williams</a></td><td>4,9</td><td>0,7</td><td>2,6</td><td>0,6</td><td>0,4</td></tr><tr><td>PG</td><td><a href=murpca01.html>Calvin Murphy</a></td><td>3,2</td><td>2,2</td><td>0,8</td><td>0,3</td><td>0,4</td></tr><tr><td>PG</td><td><a href=sparro01.html>Rory Sparrow</a></td><td>3,0</td><td>1,5</td><td>0,7</td><td>0,1</td><td>0,2</td></tr><tr><td>PG</td><td><a href=hendto01.html>Tom Henderson</a></td><td>0,9</td><td>0,6</td><td>0,0</td><td>0,0</td><td>0,0</td></tr></tbody>
+</table>
+<h5 class='ui header'><i class='user injured red icon'></i><div class='content'>Injured Players</div></h5>
+<table class='ui selectable basic table' style='width:100%;'>
+<thead><tr><th>POS</th><th>PLAYER</th><th>INJURY</th><th>DURATION</th></tr></thead><tbody></tbody>
+</table>
+<br><table width='100%'>
+<tr><td style = 'text-align: center; font-weight: bold; padding-top: 15px;'> Powered by Draft Day Sports: Pro Basketball | <a alt='Wolverine Studios' href='http://www.wolverinestudios.com'>http: //www.wolverinestudios.com</a></td></tr>
+</table>
+
 </body>
+
 </html>
